@@ -1,0 +1,12 @@
+                                 关于从git上克隆远程库到本地
+								 
+	使用git进行分布式版本管理，最好的方式是先建立远程库，然后从远程库克隆。
+    登录GitHub建立一个repository，并且勾选上Initialize this repository with a README为仓库
+创建一个README.md文件。
+     远程库创建完成后就可以使用git clone克隆一个本地库：
+	 git clone  https://github.com/AndyC/gitskills 
+	 克隆完成后就可以看到在gitskills文件夹下多了一个README.txt文件。
+	 如果多个人协作开发，那么每个人都从远程库可用一份就可以了。
+	 小结：要克隆一个仓库，首先必须知道仓库的地址，然后使用git clone 命令克隆。
+	 git 支持多种协议，包括HTTPS，但通过ssh支持的原声git协议速度最快。
+    	 
