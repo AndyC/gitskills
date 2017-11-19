@@ -23,7 +23,10 @@
   git merge 命令用于合并指定分支到当前分支
   这时候master分支上的文件就与dev分支上的内容一致了，此时可以删除dev分支：
   git branch -d dev
-  删除后再使用git branch命令看到就只剩下master一个分支了
+  删除后再使用git branch命令看到就只剩下master一个分支了。
+
+  上面说的是在dev分支上做了修改并提交后可以使用git merge命令将dev分支上面做的修改合并到master上。
+  加入在合并dev分支之前master分支也做了修改并且没有提交，那么在合并分支时就可能产生冲突。
   
   
   
