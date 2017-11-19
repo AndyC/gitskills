@@ -24,7 +24,12 @@
   这时候master分支上的文件就与dev分支上的内容一致了，此时可以删除dev分支：
   git branch -d dev
   删除后再使用git branch命令看到就只剩下master一个分支了。
-
+  
+  如果在创建一个新的分支时当前master分支上面做了修改但是没有进行add操作将修改保存到暂存区，那么
+  此时检出dev分支后git会为你保留在master分支上做的修改，即在新检出的dev分支上面也可以将master
+  分支的修改进行add和commit操作。
+  
+  
   上面说的是在dev分支上做了修改并提交后可以使用git merge命令将dev分支上面做的修改合并到master上。
   加入在合并dev分支之前master分支也做了修改并且没有提交，那么在合并分支时就可能产生冲突。
   
