@@ -1,0 +1,29 @@
+                                        创建与合并分支
+  每次提交，Git都把版本串成一条时间线，这条时间线就是一个分支。截止目前，只有一条时间线，在git里，
+  这个分支叫主分支，即master分支。HEAD严格来说并不是指向提交，而是指向master，master才是指向提交的， 
+  所以HEAD指向的就是当前分支。
+  一开始的时候，master分支是一条线，Git用master指向最新的提交，再用HEAD指向master，就能确定当前分支
+  以及当前分支的提交点。
+  每次提交，master分支都向前移动一步，这样，随着不断提交，master的分支的线也越来越长。
+  当创建了新的分支，例如dev时，Git创建了一个指针叫dev，指向与master相同的提交，再把HEAD指向dev，
+  就表示当前分支在dev上。
+  下面是分支创建和合并的相关命令：
+  创建一个分支：
+  git checkout -b dev
+  git checkout 命令加上-b这个参数的意思是创建一个分支并切换相当有下面两个命令：
+  git branch dev
+  git checkout dev
+  
+  可以使用git branch 命令来查看当前分支，git branch 命令会列出所有分支，当前分支前面会标一个*号。
+  在dev分支上做了修改并提交之后可以切换回master分支：
+  git checkout  master
+  切换回master分支后，可以看到之前在dev分支上面做的修改并不存在，因为刚才那个提交在dev分支上，
+  这时候需要将dev提交的东西合并到master分支上。
+  使用git merge dev命令。
+  git merge 命令用于合并指定分支到当前分支
+  这时候master分支上的文件就与dev分支上的内容一致了，此时可以删除dev分支：
+  git branch -d dev
+  删除后再使用git branch命令看到就只剩下master一个分支了
+  
+  
+  
