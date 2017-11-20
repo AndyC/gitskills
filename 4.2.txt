@@ -17,4 +17,6 @@
   用来做某些特性功能reslese用来做发布版历史，每次发布都是用release打包，hotfix用来做发布版之后
   的一些及时迭代修复bug的工作。
   
+  I add some code in  this  file when working on branch dev.
+  
  
